@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.fintech.data.OracleDBConnection;
-import br.com.fintech.model.Registro;
-import br.com.fintech.model.Tipo;
-import br.com.fintech.model.Usuario;
+import br.com.fintech.entities.Registro;
+import br.com.fintech.entities.Tipo;
+import br.com.fintech.entities.Usuario;
 
 public class RegistroDAO {
 	private Connection connection;

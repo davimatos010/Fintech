@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.fintech.data.OracleDBConnection;
-import br.com.fintech.model.Tipo;
+import br.com.fintech.entities.Tipo;
 
 public class TipoDAO {
 	private Connection connection;

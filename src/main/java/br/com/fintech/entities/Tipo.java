@@ -1,4 +1,4 @@
-package br.com.fintech.model;
+package br.com.fintech.entities;
 
 public class Tipo {
 	private int codigo;

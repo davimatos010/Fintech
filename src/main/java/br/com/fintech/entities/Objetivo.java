@@ -1,4 +1,4 @@
-package br.com.fintech.model;
+package br.com.fintech.entities;
 
 import java.sql.Date;
 
