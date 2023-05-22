@@ -1,6 +1,6 @@
 package br.com.fintech.entities;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Usuario {
 
@@ -8,17 +8,18 @@ public class Usuario {
 	private String nome;
 	private String email;
 	private String senha;
-	private Date dataNascimento;
+	private LocalDate dataNascimento;
 	private char genero;
 	
-	public Usuario (int codigo, String nome, String email, String senha, Date dataNascimento, char genero) {
-		this.codigo = codigo;
+	public Usuario (String nome, String email, String senha, LocalDate dataNascimento, char genero) {
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
 		this.dataNascimento = dataNascimento;
 		this.genero = genero;
 	}
+	
+	public Usuario () {}
 
 	public int getCodigo() {
 		return codigo;
@@ -52,11 +53,11 @@ public class Usuario {
 		this.senha = senha;
 	}
 
-	public Date getDataNascimento() {
+	public LocalDate getDataNascimento() {
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) {
+	public void setDataNascimento(LocalDate dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
 
@@ -67,7 +68,6 @@ public class Usuario {
 	public void setGenero(char genero) {
 		this.genero = genero;
 	}
-	
 	
 	
 		

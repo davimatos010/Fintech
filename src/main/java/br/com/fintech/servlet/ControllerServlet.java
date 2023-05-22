@@ -1,4 +1,4 @@
-package br.com.fintech.dao.servlet;
+package br.com.fintech.servlet;
 
 import java.io.IOException;
 

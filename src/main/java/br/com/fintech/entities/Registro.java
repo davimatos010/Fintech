@@ -1,23 +1,26 @@
 package br.com.fintech.entities;
 
-import java.sql.Date;
+import java.time.LocalDateTime;
 
 public class Registro {
 	int codigo;
 	Usuario usuario;
 	double valor;
-	Date dataRegistro;
+	LocalDateTime dataRegistro = LocalDateTime.now();
 	Tipo tipo;
 	String descricao;
 	String categoria;
 	
-	public Registro(int codigo, Usuario usuario, double valor, Date dataRegistro, Tipo tipo) {
-		this.codigo = codigo;
+	public Registro(Usuario usuario, double valor, LocalDateTime dataRegistro, Tipo tipo, String descricao, String categoria) {
 		this.usuario = usuario;
 		this.valor = valor;
 		this.dataRegistro = dataRegistro;
 		this.tipo = tipo;
+		this.descricao = descricao;
+		this.categoria = categoria;
 	}
+	
+	public Registro() {}
 
 	public int getCodigo() {
 		return codigo;
@@ -43,11 +46,11 @@ public class Registro {
 		this.valor = valor;
 	}
 
-	public Date getDataRegistro() {
+	public LocalDateTime getDataRegistro() {
 		return dataRegistro;
 	}
 
-	public void setDataRegistro(Date dataRegistro) {
+	public void setDataRegistro(LocalDateTime dataRegistro) {
 		this.dataRegistro = dataRegistro;
 	}
 

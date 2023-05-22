@@ -15,9 +15,13 @@ public class ListaGastos implements Acao {
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		//Refactor
+		int userId = 1;
+		
 		RegistroDAO dao = new RegistroDAO();
 		
-		List<Registro> registros = dao.selectAll();
+		List<Registro> registros = dao.listAllFromUser(userId);
 		
 		request.setAttribute("registros", registros);
 		

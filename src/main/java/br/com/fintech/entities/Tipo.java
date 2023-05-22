@@ -5,10 +5,11 @@ public class Tipo {
 	private String nome;
 
 
-	public Tipo(int codigo, String nome) {
-		this.codigo = codigo;
+	public Tipo(String nome) {
 		this.nome = nome;
 	}
+	
+	public Tipo () {}
 
 
 	public int getCodigo() {

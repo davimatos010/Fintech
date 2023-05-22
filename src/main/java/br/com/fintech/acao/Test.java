@@ -17,11 +17,12 @@ public class Test implements Acao {
 		public String executa(HttpServletRequest request, HttpServletResponse response)
 				throws ServletException, IOException {
 			
+			
 			System.out.println("teste");
 			
 			RegistroDAO dao = new RegistroDAO();
 			
-			List<Registro> registros = dao.selectAll();
+			List<Registro> registros = dao.listAllFromUser(0);
 			
 			for (Registro registro : registros) {
 				System.out.println(registro.getDescricao());
