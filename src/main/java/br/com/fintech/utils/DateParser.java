@@ -30,4 +30,16 @@ public class DateParser {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern(pattern); 
 		return date.format(fmt);
 	}
+	
+	public static LocalDateTime StringToLocalDateTime(String date, String pattern) {
+		if(date.length() < 11) {
+			String dateConcat = date.concat(" 00:00");
+			String patternConcat = pattern.concat(" HH:mm");
+			date = dateConcat;
+			pattern = patternConcat;
+		}
+		
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern(pattern);
+		return LocalDateTime.parse(date, fmt);
+	}
 }

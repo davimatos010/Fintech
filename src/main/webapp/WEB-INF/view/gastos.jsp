@@ -10,7 +10,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Fintech - Gasto</title>
+<title>Gastos - Lista</title>
 </head>
 <body>
 <%@ include file="header.jsp" %>
@@ -25,7 +25,7 @@
       <th scope="col">Categoria</th>
       <th scope="col">Descrição</th>
       <th scope="col">Valor</th>
-      <th scope="col"><button type="button" class="btn btn-success">Adicionar</button></th>
+      <th scope="col"><button type="button" class="btn btn-success" onclick="location.href='entrada?acao=NovoGasto'">Adicionar</button></th>
       
     </tr>
   </thead>
@@ -41,7 +41,7 @@
 	      <td>${registro.descricao}</td>
 	      <td><fmt:formatNumber value="${registro.valor}" type="currency"/></td>
 	      <td><button type="button" class="btn btn-primary" onclick="location.href='entrada?acao=SelecionaGasto&id=${registro.codigo}'">Editar</button>
-	      <button type="button" class="btn btn-danger">Deletar</button></td>
+	      <button type="button" class="btn btn-danger" onclick="location.href='entrada?acao=DeletaGasto&id=${registro.codigo}'">Deletar</button></td>
 	    </tr>
 	   </c:if> 
   </c:forEach>
