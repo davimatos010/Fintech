@@ -7,25 +7,22 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.fintech.dao.RegistroDAO;
-import br.com.fintech.entities.Registro;
 
-public class SelecionaGasto implements Acao {
+public class DeletaReceita implements Acao {
 
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		//Refatorar
-		int codigoUsuario = 1;
+Integer cd_registro = Integer.valueOf(request.getParameter("id"));
 		
-		
-		Integer codigoGasto = Integer.valueOf(request.getParameter("id"));
+		//Refactor
+		int cd_usuario = 1;
 		
 		RegistroDAO dao = new RegistroDAO();
-		Registro gasto = dao.getById(codigoGasto, codigoUsuario);
 		
-		request.setAttribute("registro", gasto);
+		dao.delete(cd_registro, cd_usuario);
 		
-		return "forward:gastos/edita-form.jsp";
+		return "redirect:entrada?acao=ListaReceitas";
 	}
 
 }

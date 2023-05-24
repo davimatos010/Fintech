@@ -64,7 +64,8 @@ public class RegistroDAO {
 
 		try {
 			connection = OracleDBConnection.getInstance().getConnection();
-			stmt = connection.prepareStatement("SELECT * FROM T_FINTECH_REGISTRO WHERE cd_usuario = " + codigoUsuario);
+			stmt = connection.prepareStatement("SELECT * FROM T_FINTECH_REGISTRO "
+					+ "WHERE cd_usuario = " + codigoUsuario + " ORDER BY dt_registro");
 			res = stmt.executeQuery();
 
 			while(res.next()) {

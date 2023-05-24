@@ -4,12 +4,12 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
-<c:set var="contexto" value="Gastos"></c:set>
+<c:set var="contexto" value="Receitas"></c:set>
 <c:set var="comando" value="Editar"></c:set>
 <c:set var="parsedDate" value="${DateParser.LocalDateTimeToString(registro.dataRegistro, 'yyyy-MM-dd')}"></c:set>
 
-<c:url value="entrada?acao=EditaGasto" var="formAction"></c:url>
-<c:url value="entrada?acao=ListaGastos" var="cancelar"></c:url>
+<c:url value="entrada?acao=EditaReceita" var="formAction"></c:url>
+<c:url value="entrada?acao=ListaReceitas" var="cancelar"></c:url>
 
 <!DOCTYPE html>
 <html>

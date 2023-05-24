@@ -7,13 +7,13 @@
 		  		</div>
 		  		<div class="form-group">
 		    		<label for="valor">Valor</label>
-		    		<input type="number" class="form-control" name="valor" step="any" value="${(comando == 'Editar') ? gasto.valor : ''}" required>
+		    		<input type="number" class="form-control" name="valor" step="any" value="${(comando == 'Editar') ? registro.valor : ''}" required>
 		  		</div>
 		  		<c:if test="${contexto == 'Gastos'}">
 		  		<div class="form-group">
 		    		<label for="categoria">Categoria</label>
 		    		<select class="form-control" name="categoria" required>
-		      			<option selected="selected">${gasto.categoria}</option>
+		      			<option selected="selected">${registro.categoria}</option>
 		      			<option>Outros</option>
 			  			<option>Casa</option>
 			  			<option>Contas</option>
@@ -29,8 +29,8 @@
 		  		</c:if>
 		  		<div class="form-group">
 		    		<label for="descricao">Descrição</label>
-		    		<textarea class="form-control" name="descricao" rows="2">${(comando == 'Editar') ? gasto.descricao : ''}</textarea>
-					<input type="hidden" name="id" value="${gasto.codigo}">
+		    		<textarea class="form-control" name="descricao" rows="2">${(comando == 'Editar') ? registro.descricao : ''}</textarea>
+					<input type="hidden" name="id" value="${registro.codigo}">
 					<input class="btn btn-primary" type="submit" value="${comando}">
 					<button type="button" class="btn btn-danger" onclick="location.href='${cancelar}'">Cancelar</button></td>
 		  		</div>

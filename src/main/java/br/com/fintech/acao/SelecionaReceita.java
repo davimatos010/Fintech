@@ -9,23 +9,24 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.fintech.dao.RegistroDAO;
 import br.com.fintech.entities.Registro;
 
-public class SelecionaGasto implements Acao {
+public class SelecionaReceita implements Acao {
 
 	@Override
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		//Refatorar
 		int codigoUsuario = 1;
 		
-		
-		Integer codigoGasto = Integer.valueOf(request.getParameter("id"));
+		Integer codigoReceita = Integer.valueOf(request.getParameter("id"));
 		
 		RegistroDAO dao = new RegistroDAO();
-		Registro gasto = dao.getById(codigoGasto, codigoUsuario);
+		Registro receita = dao.getById(codigoReceita, codigoUsuario);
 		
-		request.setAttribute("registro", gasto);
+		request.setAttribute("registro", receita);
 		
-		return "forward:gastos/edita-form.jsp";
+		
+		return "forward:receitas/edita-form.jsp";
 	}
 
 }
