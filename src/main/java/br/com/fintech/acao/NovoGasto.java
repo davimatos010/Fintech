@@ -12,7 +12,7 @@ public class NovoGasto implements Acao {
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		return "forward:novo-gasto-form.jsp";
+		return "forward:gastos/adiciona-form.jsp";
 	}
 
 }

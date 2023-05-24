@@ -25,7 +25,7 @@ public class ListaGastos implements Acao {
 		
 		request.setAttribute("registros", registros);
 		
-		return "forward:gastos.jsp";
+		return "forward:gastos/lista-table.jsp";
 	}
 
 }

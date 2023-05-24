@@ -25,7 +25,7 @@ public class SelecionaGasto implements Acao {
 		
 		request.setAttribute("gasto", gasto);
 		
-		return "forward:edita-gasto-form.jsp";
+		return "forward:gastos/edita-form.jsp";
 	}
 
 }
