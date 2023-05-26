@@ -6,9 +6,11 @@ import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import br.com.fintech.dao.RegistroDAO;
 import br.com.fintech.entities.Registro;
+import br.com.fintech.entities.Usuario;
 
 public class ListaGastos implements Acao {
 
@@ -16,12 +18,14 @@ public class ListaGastos implements Acao {
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		//Refactor
-		int userId = 1;
+		HttpSession sessao = request.getSession(); 
+		
+		Usuario usuario = (Usuario) sessao.getAttribute("usuarioLogado");
+		
 		
 		RegistroDAO dao = new RegistroDAO();
 		
-		List<Registro> registros = dao.listAllFromUser(userId);
+		List<Registro> registros = dao.listAllFromUser(usuario.getCodigo());
 		
 		request.setAttribute("registros", registros);
 		

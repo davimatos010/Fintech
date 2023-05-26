@@ -25,7 +25,8 @@ public class RegistroDAO {
 			connection = OracleDBConnection.getInstance().getConnection();
 			
 			String sql = "INSERT INTO T_FINTECH_REGISTRO "
-					+ "(cd_registro, cd_usuario, vl_registro, dt_registro, cd_tipo, ds_categoria, ds_registro) "
+					+ "(cd_registro, cd_usuario, vl_registro, dt_registro, "
+					+ "cd_tipo, ds_categoria, ds_registro) "
 					+ "VALUES (SQ_REGISTRO.nextval, ?, ?, ?, ?, ?, ?)";
 
 			stmt = connection.prepareStatement(sql);

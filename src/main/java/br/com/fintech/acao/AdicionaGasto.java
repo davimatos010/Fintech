@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import br.com.fintech.dao.RegistroDAO;
 import br.com.fintech.entities.Registro;
@@ -19,14 +20,15 @@ public class AdicionaGasto implements Acao {
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		HttpSession sessao = request.getSession(); 
+		
+		Usuario usuario = (Usuario) sessao.getAttribute("usuarioLogado");
+		
 		Registro gasto = new Registro();
-		Usuario usuario = new Usuario();
+		
 		Tipo tipo = new Tipo();
 		
 		tipo.setCodigo(2);
-		
-		//Refactor
-		usuario.setCodigo(1);
 		
 		gasto.setUsuario(usuario);
 		

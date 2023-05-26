@@ -26,6 +26,10 @@ public class DateParser {
 		return Instant.ofEpochMilli(millis).atZone(ZoneId.systemDefault()).toLocalDateTime();
 	}
 	
+	public static LocalDate SQLToLocalDate(Date date) {
+		return date.toLocalDate();
+	}
+	
 	public static String LocalDateTimeToString(LocalDateTime date, String pattern) {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern(pattern); 
 		return date.format(fmt);

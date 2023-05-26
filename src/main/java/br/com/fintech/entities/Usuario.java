@@ -9,9 +9,9 @@ public class Usuario {
 	private String email;
 	private String senha;
 	private LocalDate dataNascimento;
-	private char genero;
+	private String genero;
 	
-	public Usuario (String nome, String email, String senha, LocalDate dataNascimento, char genero) {
+	public Usuario (String nome, String email, String senha, LocalDate dataNascimento, String genero) {
 		this.nome = nome;
 		this.email = email;
 		this.senha = senha;
@@ -61,11 +61,11 @@ public class Usuario {
 		this.dataNascimento = dataNascimento;
 	}
 
-	public char getGenero() {
+	public String getGenero() {
 		return genero;
 	}
 
-	public void setGenero(char genero) {
+	public void setGenero(String genero) {
 		this.genero = genero;
 	}
 	

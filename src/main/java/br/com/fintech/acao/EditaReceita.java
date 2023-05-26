@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import br.com.fintech.dao.RegistroDAO;
 import br.com.fintech.entities.Registro;
@@ -19,16 +20,14 @@ public class EditaReceita implements Acao {
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		Integer codigo = Integer.valueOf(request.getParameter("id"));
+		HttpSession sessao = request.getSession(); 
 		
-		//Refactor
-		int codigoUsuario = 1;
+		Usuario usuario = (Usuario) sessao.getAttribute("usuarioLogado");
+		
+		Integer codigo = Integer.valueOf(request.getParameter("id"));
 		
 		Registro receita = new Registro();
 		receita.setCodigo(codigo);
-		
-		Usuario usuario = new Usuario();
-		usuario.setCodigo(codigoUsuario);
 		
 		receita.setUsuario(usuario);
 		

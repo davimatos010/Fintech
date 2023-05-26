@@ -11,7 +11,8 @@ public class Registro {
 	String descricao;
 	String categoria;
 	
-	public Registro(Usuario usuario, double valor, LocalDateTime dataRegistro, Tipo tipo, String descricao, String categoria) {
+	public Registro(Usuario usuario, double valor, LocalDateTime dataRegistro, 
+			Tipo tipo, String descricao, String categoria) {
 		this.usuario = usuario;
 		this.valor = valor;
 		this.dataRegistro = dataRegistro;
