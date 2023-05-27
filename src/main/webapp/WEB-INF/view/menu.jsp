@@ -4,44 +4,69 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
       	<c:choose>
         	<c:when test="${contexto == 'Dashboard'}">
-      			<a class="nav-link active" aria-current="page" href="#">Dashboard</a>
-      	</c:when>
-        	<c:otherwise>
-      			<a class="nav-link" href="#">Dashboard</a>
-        	</c:otherwise>
+	        	<li class="nav=item">
+	      			<a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+	      		</li>
+      		</c:when>
+	        <c:otherwise>
+	        	<li class="nav=item">
+	      			<a class="nav-link" href="#">Dashboard</a>
+	      		</li>
+	        </c:otherwise>
         </c:choose>
         
         <c:choose>
         	<c:when test="${contexto == 'Gastos'}">
-        		<a class="nav-link active" aria-current="page" href="entrada?acao=ListaGastos">Gastos</a>
+	        	<li class="nav=item">
+	        		<a class="nav-link active" aria-current="page" href="entrada?acao=ListaGastos">Gastos</a>
+	        	</li>
         	</c:when>
         	<c:otherwise>
-        		<a class="nav-link" href="entrada?acao=ListaGastos">Gastos</a>
+	        	<li class="nav=item">
+	        		<a class="nav-link" href="entrada?acao=ListaGastos">Gastos</a>
+	        	</li>
         	</c:otherwise>
         </c:choose>
         
         <c:choose>
         	<c:when test="${contexto == 'Receitas'}">
-        		<a class="nav-link active" aria-current="page" href="entrada?acao=ListaReceitas">Receitas</a>
+	        	<li class="nav=item">
+	        		<a class="nav-link active" aria-current="page" href="entrada?acao=ListaReceitas">Receitas</a>
+	        	</li>
         	</c:when>
         	<c:otherwise>
-        		<a class="nav-link" href="entrada?acao=ListaReceitas">Receitas</a>
+	        	<li class="nav=item">
+	        		<a class="nav-link" href="entrada?acao=ListaReceitas">Receitas</a>
+	        	</li>
         	</c:otherwise>
         </c:choose>
         
         <c:choose>
         	<c:when test="${contexto == 'Investimentos'}">
-        		<a class="nav-link active" aria-current="page" href="#">Investimentos</a>
+	        	<li class="nav=item">
+	        		<a class="nav-link active" aria-current="page" href="#">Investimentos</a>
+	        	</li>
         	</c:when>
         	<c:otherwise>
-        		<a class="nav-link" href="#">Investimentos</a>
+	        	<li class="nav=item">
+	        		<a class="nav-link" href="#">Investimentos</a>
+	        	</li>
         	</c:otherwise>
         </c:choose>
-      </div>
+	        <li class="navbar-text ms-5">
+		        	<em> Olá, ${usuarioLogado.nome}!</em>
+		    </li>
+        </ul>
+        <ul class="navbar-nav ms-auto me-2">
+	        <li class="nav=item">
+	        	<a class="nav-link active" href="entrada?acao=Logout">Sair</a>
+	        </li>
+        </ul>
+      
     </div>
   </div>
 </nav>

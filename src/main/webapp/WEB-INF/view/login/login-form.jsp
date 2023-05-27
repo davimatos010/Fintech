@@ -6,7 +6,7 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title>Fintech - Login</title>
 		<%@ include file="../header.jsp" %>
 	</head>
 	<body style="background-color:#e0dadc;">
