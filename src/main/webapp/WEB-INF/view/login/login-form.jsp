@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:url value="entrada?acao=Login" var="entradaSite"/>
+<c:url value="entrada?acao=CadastroForm" var="cadastro"/>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,18 +16,18 @@
 				<h1 class="text-center mb-3">Fintech</h1>
 				<form action="${entradaSite}" method="post">
 					<div class="mb-3 p-3">
-						<label for="exampleInputEmail1" class="form-label">Email</label>
+						<label for="email" class="form-label">Email</label>
 						<input type="email" class="form-control" name="login" aria-describedby="emailHelp">
 						<div id="emailHelp" class="form-text">Nós nunca compartilharemos seu email com ninguém.</div>
 					</div>
 					<div class="mb-3 p-3">
-						<label for="exampleInputPassword1" class="form-label">Senha</label>
+						<label for="senha" class="form-label">Senha</label>
 						<input type="password" class="form-control" name="senha">
 					</div>
 					<div class="mb-3 p-3 form-check">
-						<a href="#">Criar uma conta</a>
+						<a href="${cadastro}">Criar uma conta</a>
 					</div>
-					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="submit" class="btn btn-primary">Entrar</button>
 				</form>
 			</div>
 		</div>

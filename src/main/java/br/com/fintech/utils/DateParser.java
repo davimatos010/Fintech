@@ -46,4 +46,9 @@ public class DateParser {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern(pattern);
 		return LocalDateTime.parse(date, fmt);
 	}
+	
+	public static LocalDate StringToLocalDate(String date, String pattern) {
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern(pattern);
+		return LocalDate.parse(date, fmt);
+	}
 }

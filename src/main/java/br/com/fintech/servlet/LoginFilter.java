@@ -26,7 +26,8 @@ public class LoginFilter extends HttpFilter implements Filter {
 		
 		HttpSession sessao = req.getSession();
 		boolean usuarioNaoLogado = sessao.getAttribute("usuarioLogado") == null;
-		boolean acaoProtegida = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
+		boolean acaoProtegida = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm") 
+				|| paramAcao.equals("CadastroForm") || paramAcao.equals("Cadastro"));
 		
 		if(acaoProtegida && usuarioNaoLogado) {
 			res.sendRedirect("redirect:entrada?acao=LoginForm");
