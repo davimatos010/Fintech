@@ -24,9 +24,9 @@ public class Cadastro implements Acao {
 		String generoForm = request.getParameter("genero");
 		String genero = null;
 		
-		if(generoForm == "Masculino") {
+		if(generoForm.equals("Masculino")) {
 			genero = "M";
-		} else if (generoForm == "Feminino") {
+		} else if (generoForm.equals("Feminino")) {
 			genero = "F";
 		} else {
 			genero = "O";

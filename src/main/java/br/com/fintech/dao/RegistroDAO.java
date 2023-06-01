@@ -38,8 +38,8 @@ public class RegistroDAO {
 			stmt.setString(5, registro.getCategoria());
 			stmt.setString(6, registro.getDescricao());
 			
-			System.out.println("Registro incluído no bd");
 			stmt.executeUpdate();
+			System.out.println("Registro incluído no bd");
 
 		} catch (SQLException e) {
 			e.printStackTrace();

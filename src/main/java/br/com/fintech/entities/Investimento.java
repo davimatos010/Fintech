@@ -1,33 +1,37 @@
 package br.com.fintech.entities;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Investimento {
-	int codigo;
+	Integer codigo;
 	Usuario usuario;
 	double valor;
 	double taxa;
 	String instituicaoFinanceira;
 	Tipo tipo;
-	Date dataInicio;
-	Date dataFinal;
+	LocalDate dataInicio;
+	LocalDate dataFinal;
 	String descricao;
 
-	public Investimento(int codigo, Usuario usuario, double valor, double taxa, String instituicaoFinanceira, Tipo tipo, Date dataInicio) {
-		this.codigo = codigo;
+	public Investimento(Usuario usuario, double valor, double taxa, String instituicaoFinanceira, 
+			Tipo tipo, LocalDate dataInicio, LocalDate dataFinal, String descricao) {
 		this.usuario = usuario;
 		this.valor = valor;
 		this.taxa = taxa;
 		this.instituicaoFinanceira = instituicaoFinanceira;
 		this.tipo = tipo;
 		this.dataInicio = dataInicio;
+		this.dataFinal = dataFinal;
+		this.descricao = descricao;
 	}
+	
+	public Investimento() {};
 
 	public int getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(int codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 
@@ -71,19 +75,19 @@ public class Investimento {
 		this.tipo = tipo;
 	}
 
-	public Date getDataInicio() {
+	public LocalDate getDataInicio() {
 		return dataInicio;
 	}
 
-	public void setDataInicio(Date dataInicio) {
+	public void setDataInicio(LocalDate dataInicio) {
 		this.dataInicio = dataInicio;
 	}
 
-	public Date getDataFinal() {
+	public LocalDate getDataFinal() {
 		return dataFinal;
 	}
 
-	public void setDataFinal(Date dataFinal) {
+	public void setDataFinal(LocalDate dataFinal) {
 		this.dataFinal = dataFinal;
 	}
 
