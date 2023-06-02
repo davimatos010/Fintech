@@ -9,12 +9,12 @@
       	<c:choose>
         	<c:when test="${contexto == 'Dashboard'}">
 	        	<li class="nav=item">
-	      			<a class="nav-link active" aria-current="page" href="#">Dashboard</a>
+	      			<a class="nav-link active" aria-current="page" href="entrada?acao=Dashboard">Dashboard</a>
 	      		</li>
       		</c:when>
 	        <c:otherwise>
 	        	<li class="nav=item">
-	      			<a class="nav-link" href="#">Dashboard</a>
+	      			<a class="nav-link" href="entrada?acao=Dashboard">Dashboard</a>
 	      		</li>
 	        </c:otherwise>
         </c:choose>
@@ -48,12 +48,12 @@
         <c:choose>
         	<c:when test="${contexto == 'Investimentos'}">
 	        	<li class="nav=item">
-	        		<a class="nav-link active" aria-current="page" href="#">Investimentos</a>
+	        		<a class="nav-link active" aria-current="page" href="entrada?acao=ListaInvestimentos">Investimentos</a>
 	        	</li>
         	</c:when>
         	<c:otherwise>
 	        	<li class="nav=item">
-	        		<a class="nav-link" href="#">Investimentos</a>
+	        		<a class="nav-link" href="entrada?acao=ListaInvestimentos">Investimentos</a>
 	        	</li>
         	</c:otherwise>
         </c:choose>

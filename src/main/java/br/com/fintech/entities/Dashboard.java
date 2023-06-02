@@ -7,7 +7,7 @@ public class Dashboard {
 	private double somaGastos;
 	private double somaRecebimentos;
 	private double somaInvestimentos;
-	private double saldo = somaRecebimentos - somaGastos;
+	private double saldo;
 	
 	public Dashboard(Usuario usuario, Registro ultimoGasto, Registro ultimoRecebimento, 
 			double somaGastos, double somaRecebimentos, double somaInvestimentos) {
@@ -17,6 +17,7 @@ public class Dashboard {
 		this.somaGastos = somaGastos;
 		this.somaRecebimentos = somaRecebimentos;
 		this.somaInvestimentos = somaInvestimentos;
+		this.saldo = this.somaRecebimentos - this.somaGastos;
 	}
 	
 	public Dashboard() {}
