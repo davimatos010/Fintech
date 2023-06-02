@@ -6,10 +6,15 @@
 <%@ page import="br.com.fintech.utils.DateParser" %>
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" type="text/css" href="../css/homeStyle.css">
+<!-- Montserrat Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="resources/css/homeStyle.css">
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Insert title here</title>
+		<title>Fintech  - ${contexto}</title>
 		<%@ include file="../header.jsp" %>
 	</head>
 	<body>
@@ -31,7 +36,7 @@
 
           <div class="card">
             <div class="card-inner">
-              <h3>ULTIMO GASTO</h3>
+              <h4>ULTIMO GASTO</h4>
               <span class="material-icons-outlined">currency_exchange</span>
             </div>
             <h3>${DateParser.LocalDateTimeToString(dashboard.ultimoGasto.dataRegistro, "dd/MM/yyyy")}</h3>
@@ -40,7 +45,7 @@
 
           <div class="card">
             <div class="card-inner">
-              <h3>ULTIMO RECEBIMENTO</h3>
+              <h4>ULTIMO RECEBIMENTO</h4>
               <span class="material-icons-outlined">wallet</span>
             </div>
             <h3>${DateParser.LocalDateTimeToString(dashboard.ultimoRecebimento.dataRegistro, "dd/MM/yyyy")}</h3>
@@ -49,7 +54,7 @@
 
           <div class="card">
             <div class="card-inner">
-              <h3>MEU SALDO</h3>
+              <h4>MEU SALDO</h4>
               <span class="material-icons-outlined">savings</span>
             </div>
             <h1><fmt:formatNumber value="${dashboard.saldo}" type="currency"/></h1>
@@ -57,7 +62,7 @@
 
           <div class="card">
             <div class="card-inner">
-              <h3>INVESTIMENTOS</h3>
+              <h4>INVESTIMENTOS</h4>
               <span class="material-icons-outlined">fact_check</span>
             </div>
             <h1><fmt:formatNumber value="${dashboard.somaInvestimentos}" type="currency"/></h1>
