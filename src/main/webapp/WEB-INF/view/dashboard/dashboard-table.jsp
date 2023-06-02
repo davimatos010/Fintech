@@ -34,25 +34,27 @@
 
         <div class="main-cards">
 
-          <div class="card">
+          <div class="card shadow p-3 mb-5 rounded">
             <div class="card-inner">
-              <h4>ULTIMO GASTO</h4>
+              <h5>ULTIMO GASTO</h5>
               <span class="material-icons-outlined">currency_exchange</span>
             </div>
-            <h3>${DateParser.LocalDateTimeToString(dashboard.ultimoGasto.dataRegistro, "dd/MM/yyyy")}</h3>
+            <h6>${dashboard.ultimoGasto.categoria}</h6>
+            <h3>${(dashboard.ultimoGasto.dataRegistro != null) ? DateParser.LocalDateTimeToString(dashboard.ultimoGasto.dataRegistro, "dd/MM/yyyy") : null}</h3>
             <h1><fmt:formatNumber value="${dashboard.ultimoGasto.valor}" type="currency" /></h1>
           </div>
 
-          <div class="card">
+          <div class="card shadow p-3 mb-5 rounded">
             <div class="card-inner">
-              <h4>ULTIMO RECEBIMENTO</h4>
+              <h5>ULTIMO RECEBIMENTO</h5>
               <span class="material-icons-outlined">wallet</span>
             </div>
-            <h3>${DateParser.LocalDateTimeToString(dashboard.ultimoRecebimento.dataRegistro, "dd/MM/yyyy")}</h3>
+            <h6>${dashboard.ultimoRecebimento.descricao}</h6>
+            <h3>${(dashboard.ultimoRecebimento.dataRegistro != null) ? DateParser.LocalDateTimeToString(dashboard.ultimoRecebimento.dataRegistro, "dd/MM/yyyy") : null}</h3>
             <h1><fmt:formatNumber value="${dashboard.ultimoRecebimento.valor}" type="currency"/></h1>
           </div>
 
-          <div class="card">
+          <div class="card shadow p-3 mb-5 rounded">
             <div class="card-inner">
               <h4>MEU SALDO</h4>
               <span class="material-icons-outlined">savings</span>
@@ -60,7 +62,7 @@
             <h1><fmt:formatNumber value="${dashboard.saldo}" type="currency"/></h1>
           </div>
 
-          <div class="card">
+          <div class="card shadow p-3 mb-5 rounded">
             <div class="card-inner">
               <h4>INVESTIMENTOS</h4>
               <span class="material-icons-outlined">fact_check</span>

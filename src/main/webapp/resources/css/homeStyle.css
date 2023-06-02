@@ -41,19 +41,23 @@ body {
   }
   
   .card:first-child {
-    background-color: #0c4277;
+    /* background-color: #0c4277;*/
+    background-color: #e0dadc
   }
   
   .card:nth-child(2) {
-    background-color: #0c4277;
+    /* background-color: #0c4277;*/
+    background-color: #e0dadc
   }
   
   .card:nth-child(3) {
-    background-color: #0c4277;
+    /* background-color: #0c4277;*/
+    background-color: #e0dadc
   }
   
   .card:nth-child(4) {
-    background-color: #0c4277;
+    /* background-color: #0c4277;*/
+    background-color: #e0dadc
   }
   
   .card-inner {

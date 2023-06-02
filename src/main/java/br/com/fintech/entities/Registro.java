@@ -6,7 +6,7 @@ public class Registro {
 	int codigo;
 	Usuario usuario;
 	double valor;
-	LocalDateTime dataRegistro = LocalDateTime.now();
+	LocalDateTime dataRegistro;
 	Tipo tipo;
 	String descricao;
 	String categoria;
