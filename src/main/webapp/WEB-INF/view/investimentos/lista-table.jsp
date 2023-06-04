@@ -25,22 +25,28 @@
 		  <thead>
 		    <tr>
 		      <th scope="col">Data</th>
-		      <th scope="col">Categoria</th>
-		      <th scope="col">Descrição</th>
 		      <th scope="col">Valor</th>
+		      <th scope="col">Taxa</th>
+		      <th scope="col">Instituição</th>
+		      <th scope="col">Tipo</th>
+		      <th scope="col">Descrição</th>
+		      <th scope="col">Vencimento</th>
+		      
 		      <th scope="col"><button type="button" class="btn btn-success" onclick="location.href='${botaoAdicionar}'">Adicionar</button></th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		  <c:forEach items="${investimentos}" var="investimento">
 			  <c:set var="codigoTipo" value="${investimento.tipo.codigo}"></c:set>
-			  <c:set var="dataRegistro" value= "YYYY/MM/DD"></c:set>
 			   
 			    <tr>
-			      <th scope="row">${dataRegistro}</th>
-			      <td>Categoria</td>
-			      <td>Descricao</td>
-			      <td><fmt:formatNumber value="100.0" type="currency"/></td>
+			      <th scope="row">${DateParser.LocalDateToString(investimento.dataInicio, "dd/MM/yyyy")}</th>
+			      <td><fmt:formatNumber value="${investimento.valor}" type="currency"/></td>
+			      <td><fmt:formatNumber value="${investimento.taxa}" type="percent" maxFractionDigits ="2" /></td>
+			      <td>Banco</td>
+			      <td>${investimento.tipo.codigo== 3 ? 'Renda fixa' : 'Renda variável'}</td>
+			      <td>${investimento.descricao}</td>
+			      <td>${(investimento.dataInicio != null) ? DateParser.LocalDateToString(investimento.dataFinal, "dd/MM/yyyy") : null}</td>
 			      <td><button type="button" class="btn btn-primary" onclick="location.href='${botaoEditar}${registro.codigo}'">Editar</button>
 			      <button type="button" class="btn btn-danger" onclick="location.href='${botaoDeletar}${registro.codigo}'">Deletar</button></td>
 			    </tr>

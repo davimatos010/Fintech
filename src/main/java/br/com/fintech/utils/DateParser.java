@@ -35,6 +35,11 @@ public class DateParser {
 		return date.format(fmt);
 	}
 	
+	public static String LocalDateToString(LocalDate date, String pattern) {
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern(pattern);
+		return date.format(fmt);
+	}
+	
 	public static LocalDateTime StringToLocalDateTime(String date, String pattern) {
 		if(date.length() < 11) {
 			String dateConcat = date.concat(" 00:00");

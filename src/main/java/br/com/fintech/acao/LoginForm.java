@@ -12,7 +12,7 @@ public class LoginForm implements Acao {
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		return "forward:login/login-form.jsp";
+		return "forward:login/login-form-new.jsp";
 	}
 
 }
