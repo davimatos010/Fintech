@@ -32,7 +32,7 @@
 		      
 		            <div class="input-email-container">
 		              <i class="ph-envelope"></i>
-		              <input type="email" name="email" id="email" class="input-email" placeholder="Insira o seu email" autofocus />
+		              <input type="email" name="login" id="email" class="input-email" placeholder="Insira o seu email" autofocus />
 		            </div>
 		          </label>
 		      
