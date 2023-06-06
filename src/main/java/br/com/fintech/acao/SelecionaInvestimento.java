@@ -29,7 +29,7 @@ public class SelecionaInvestimento implements Acao {
 		
 		request.setAttribute("investimento", investimento);
 		
-		return "forward:gastos/edita-form.jsp";
+		return "forward:investimentos/edita-form.jsp";
 	}
 
 }

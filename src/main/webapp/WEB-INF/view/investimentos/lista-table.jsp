@@ -47,8 +47,8 @@
 			      <td>${investimento.tipo.codigo== 3 ? 'Renda fixa' : 'Renda variável'}</td>
 			      <td>${investimento.descricao}</td>
 			      <td>${(investimento.dataInicio != null) ? DateParser.LocalDateToString(investimento.dataFinal, "dd/MM/yyyy") : null}</td>
-			      <td><button type="button" class="btn btn-primary" onclick="location.href='${botaoEditar}${registro.codigo}'">Editar</button>
-			      <button type="button" class="btn btn-danger" onclick="location.href='${botaoDeletar}${registro.codigo}'">Deletar</button></td>
+			      <td><button type="button" class="btn btn-primary" onclick="location.href='${botaoEditar}${investimento.codigo}'">Editar</button>
+			      <button type="button" class="btn btn-danger" onclick="location.href='${botaoDeletar}${investimento.codigo}'">Deletar</button></td>
 			    </tr>
 		  </c:forEach>
 		  </tbody>

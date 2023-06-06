@@ -20,7 +20,7 @@
 		  		<div class="form-group">
 		  			<label for="tipo">Tipo</label>
 		  			<select class="form-control" name="tipo" required>
-		  				<option selected="selected">${investimento.tipo.nome}</option>
+		  				<option selected="selected">${(investimento.tipo.codigo == '3') ? 'Renda Fixa' : 'Renda Variável' }</option>
 		  				<option>Renda Fixa</option>
 		  				<option>Renda Variável</option>
 		  			</select>
