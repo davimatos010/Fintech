@@ -32,7 +32,7 @@
 		      
 		            <div class="input-email-container">
 		              <i class="ph-envelope"></i>
-		              <input type="email" name="login" id="email" class="input-email" placeholder="Insira o seu email" autofocus />
+		              <input type="email" name="login" id="email" class="input-email" placeholder="Insira o seu email" autofocus value="usuario@email.com" />
 		            </div>
 		          </label>
 		      
@@ -41,7 +41,7 @@
 		      
 		            <div class="input-password-container">
 		              <i class="ph-lock"></i>
-		              <input type="password" name="senha" id="password" class="input-password" placeholder="*************" />
+		              <input type="password" name="senha" id="password" class="input-password" placeholder="*************" value="abc123456" />
 		            </div>
 		      
 		          </label>          

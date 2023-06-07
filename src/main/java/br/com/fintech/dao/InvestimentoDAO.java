@@ -220,6 +220,8 @@ public class InvestimentoDAO {
 					+ "WHERE cd_usuario = ? AND cd_investimento = ?";
 			
 			stmt = connection.prepareStatement(sql);
+			stmt.setInt(1, codigoUsuario);
+			stmt.setInt(2, codigoInvestimento);
 			
 			stmt.executeUpdate();
 			

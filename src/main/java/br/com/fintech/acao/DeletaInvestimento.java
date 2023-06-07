@@ -16,7 +16,7 @@ public class DeletaInvestimento implements Acao {
 	public String executa(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		Integer cd_investimento = Integer.valueOf("id");
+		Integer cd_investimento = Integer.valueOf(request.getParameter("id"));
 		
 		HttpSession sessao = request.getSession(); 
 		
