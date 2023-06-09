@@ -141,5 +141,5 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/java,eclipse,windows,visualstudiocode
 /build/
 
-OracleDBConnection.java
-OracleDBConnection.class
+DataSource.java
+DataSource.class
